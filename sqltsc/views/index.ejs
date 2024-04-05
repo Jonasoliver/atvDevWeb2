@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Clientes e Pedidos</title>
+</head>
+<body>
+    <h1>Lista de Clientes</h1>
+    <ul>
+        <% cliente.forEach(cliente => { %>
+        <l1>
+            Nome: <%= cliente.nome %><br>
+            Email: <%= cliente.email %><br>
+
+            <hr>
+        </l1>
+        <% }) %>
+    </ul>
+    <h1>Lista de Pedidos</h1>
+    <ul>
+        <% pedidos.forEach(pedidos => { %>
+        <l1>
+            Nome do pedido: <%= pedidos.nome_pedido %><br>
+            Valor: <%= pedidos.preco_pedido %><br>
+
+            <hr>
+        </l1>
+        <% }) %>
+    </ul>
+</body>
+</html>
