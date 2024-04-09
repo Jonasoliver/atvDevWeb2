@@ -6,7 +6,7 @@ const app = express()
 // Rota para buscar todos os usuários do banco de dados
 
 app.set('view engine', 'ejs')
-app.set('views', './views')
+app.set('Views', './Views')
 
 app.get('/usuarios', (req, res) => {
     connection.query('SELECT * FROM cliente', (err, results) => {

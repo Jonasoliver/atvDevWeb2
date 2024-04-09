@@ -1,15 +1,18 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var mysql2_1 = require("mysql2");
+const mysql2_1 = __importDefault(require("mysql2"));
 // Configurações de conexão com o banco de dados
-var connection = mysql2_1.default.createConnection({
+const connection = mysql2_1.default.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'fatec',
     database: 'atvdevweb'
 });
 // Conectar ao banco de dados 
-connection.connect(function (err) {
+connection.connect((err) => {
     if (err) {
         console.log('Erro ao conectar ao banco de dados:', err);
         return;
